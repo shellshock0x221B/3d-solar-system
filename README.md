@@ -33,8 +33,6 @@ r
 2
 m
 1
-	​
-
 m
 2
 	​
@@ -44,7 +42,7 @@ m
 
 This fundamental law governs the orbits and relative motions between the objects in the simulation.
 
-🕰️ Einstein’s Special Relativity (النسبية الخاصة)
+🕰️ Einstein’s Special Relativity
 
 While the simulation doesn’t implement full relativistic physics, it draws conceptual inspiration from Einstein’s insights about:
 
