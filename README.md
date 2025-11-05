@@ -47,3 +47,4 @@ These ideas inform the design philosophy — that observation and reference fram
 ⚙️ Requirements
 
 C compiler (GCC / Clang / MSVC)
+Build : "gcc main.c elements.c elements.h -o Emulator -lraylib -lm"
