@@ -1,11 +1,11 @@
-![Solar System Screenshot](./img/swappy-20251105-210326.png)
+![Solar System Screenshot](/img/swappy-20251105-210326.png)
 
 
 
 🌌 3D Solar System Simulation
 
 A 3D Solar System simulation written in C using raylib, built to visualize fundamental concepts of astrophysics and space dynamics.
-This project demonstrates how celestial bodies move under the influence of gravity, and introduces ideas inspired by Newton’s law of universal gravitation and Einstein’s special relativity (النسبية الخاصة).
+This project demonstrates how celestial bodies move under the influence of gravity, and introduces ideas inspired by Newton’s law of universal gravitation and Einstein’s special relativity.
 
 🧠 Overview
 
