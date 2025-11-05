@@ -19,22 +19,8 @@ Position, velocity, and rotation can be visualized dynamically in real-time.
 
 Each celestial body experiences a force proportional to the product of their masses and inversely proportional to the square of their distance:
 
-𝐹
-=
-𝐺
-𝑚
-1
-𝑚
-2
-𝑟
-2
-F=G
-r
-2
-m
-1
-m
-2
+𝐹=𝐺𝑚1𝑚2𝑟^2
+
 This fundamental law governs the orbits and relative motions between the objects in the simulation.
 
 🕰️ Einstein’s Special Relativity
