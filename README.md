@@ -49,4 +49,4 @@ These ideas inform the design philosophy — that observation and reference fram
 C compiler (GCC / Clang / MSVC)
 
 Build : 
-use 'gcc main.c elements.c elements.h -o Emulator -lraylib -lm'
+Use 'gcc main.c elements.c elements.h -o Emulator -lraylib -lm'
