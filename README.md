@@ -35,11 +35,6 @@ m
 1
 m
 2
-	​
-
-	​
-
-
 This fundamental law governs the orbits and relative motions between the objects in the simulation.
 
 🕰️ Einstein’s Special Relativity
