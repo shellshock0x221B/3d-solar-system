@@ -1,4 +1,4 @@
-![Solar System Screenshot](./img/system.png)
+![Solar System Screenshot](3d-solar-system/img/swappy-20251105-210326.png)
 
 
 
