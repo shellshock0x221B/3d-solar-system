@@ -1,3 +1,7 @@
+![Solar System Screenshot](./img/system.png)
+
+
+
 🌌 3D Solar System Simulation
 
 A 3D Solar System simulation written in C using raylib, built to visualize fundamental concepts of astrophysics and space dynamics.
@@ -19,7 +23,7 @@ Position, velocity, and rotation can be visualized dynamically in real-time.
 
 Each celestial body experiences a force proportional to the product of their masses and inversely proportional to the square of their distance:
 
-𝐹=𝐺𝑚1𝑚2𝑟^2
+𝐹=𝐺𝑚1𝑚/𝑟^2
 
 This fundamental law governs the orbits and relative motions between the objects in the simulation.
 
