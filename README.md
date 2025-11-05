@@ -51,3 +51,6 @@ C compiler (GCC / Clang / MSVC)
 Build : 
 ```bash
 gcc main.c elements.c elements.h -o Emulator -lraylib -lm
+
+./Emulator
+
