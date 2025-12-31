@@ -7,7 +7,7 @@
 A 3D Solar System simulation written in C using raylib, built to visualize fundamental concepts of astrophysics and space dynamics.
 This project demonstrates how celestial bodies move under the influence of gravity, and introduces ideas inspired by Newton’s law of universal gravitation and Einstein’s special relativity.
 
-🧠 Overview
+ Overview
 
 This simulation models the motion of celestial bodies in a simplified 3D environment.
 It aims to illustrate how:
@@ -18,8 +18,8 @@ Time and motion are relative to the observer’s frame of reference, inspired by
 
 Position, velocity, and rotation can be visualized dynamically in real-time.
 
-⚛️ Core Concepts
-🔭 Newton’s Law of Universal Gravitation
+ Core Concepts
+ Newton’s Law of Universal Gravitation
 
 Each celestial body experiences a force proportional to the product of their masses and inversely proportional to the square of their distance:
 
@@ -27,7 +27,7 @@ Each celestial body experiences a force proportional to the product of their mas
 
 This fundamental law governs the orbits and relative motions between the objects in the simulation.
 
-🕰️ Einstein’s Special Relativity
+Einstein’s Special Relativity
 
 While the simulation doesn’t implement full relativistic physics, it draws conceptual inspiration from Einstein’s insights about:
 
