@@ -27,7 +27,7 @@ extern Object moon;
 
 void createObjects(void);
 void drawObjects(void);
-void updatePhysics(void);
+void updatePhysics(Object *planet);
 void DrawWarpedGrid(Object sun, Object mercury, Object venus, Object earth,
                     Object mars, Object jupiter, Object saturn,
                     Object uranus, Object neptune);
