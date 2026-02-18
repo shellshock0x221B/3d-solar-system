@@ -2,6 +2,17 @@
 #include "elements.h"
 
 
+/*sun;
+extern Object mercury;
+extern Object venus;
+extern Object earth;
+extern Object mars;
+extern Object jupiter;
+extern Object saturn;
+extern Object uranus;
+extern Object neptune;
+extern Object moon;
+*/
 
     
     int main(){
@@ -9,7 +20,7 @@
         InitWindow(1400, 800, "genrale grv emu");
 
         Camera cam = {0};
-        cam.position =(Vector3) {0.0f, 50.0f , -50.0f};
+        cam.position =(Vector3) { -60, 100 , 0};
         cam.target = (Vector3) {0.0f , 0.0f , 0.0f};
         cam.up = (Vector3) {0.0f , 1.0f , 0.0f};
         cam.fovy = 45.0f;
@@ -24,7 +35,15 @@ ToggleFullscreen();
 
     while (!WindowShouldClose()) {
 
-    updatePhysics();
+    updatePhysics(&mercury);
+    updatePhysics(&venus);
+    updatePhysics(&neptune);
+    updatePhysics(&uranus);
+    updatePhysics(&jupiter);
+    updatePhysics(&mars);
+    updatePhysics(&earth);
+    updatePhysics(&saturn);
+
     UpdateCamera(&cam, CAMERA_FREE);
     
     BeginDrawing();
