@@ -95,92 +95,6 @@ void drawObjects(){
     
 }
 
-void updatePhysics(){
-
-    float dt = GetFrameTime();
-
-    //Mercury
-    Vector3 dirM = (Vector3){sun.pos.x - mercury.pos.x ,sun.pos.y - mercury.pos.y,sun.pos.z - mercury.pos.z};
-    float rM = sqrt(dirM.x * dirM.x  + dirM.y *dirM.y + dirM.z * dirM.z);
-    float ForceM = (G * sun.mass * mercury.mass) / (rM * rM);
-    Vector3 dirMNorm = Vector3Normalize(dirM);
-    Vector3 FM = (Vector3){ ForceM * dirMNorm.x ,ForceM * dirMNorm.y , ForceM * dirMNorm.z};
-    mercury.acc = (Vector3){FM.x / mercury.mass , FM.y / mercury.mass , FM.z / mercury.mass};
-    mercury.vel = Vector3Add(mercury.vel, Vector3Scale(mercury.acc, dt));
-    mercury.pos = Vector3Add(mercury.pos, Vector3Scale(mercury.vel, dt));
-
-    //Venus
-    Vector3 dirV = (Vector3){sun.pos.x - venus.pos.x ,sun.pos.y - venus.pos.y,sun.pos.z - venus.pos.z};
-    float rV = sqrt(dirV.x * dirV.x  + dirV.y *dirV.y + dirV.z * dirV.z);
-    float ForceV = (G * sun.mass * venus.mass) / (rV * rV);
-    Vector3 dirVNorm = Vector3Normalize(dirV);
-    Vector3 FV = (Vector3){ ForceV * dirVNorm.x ,ForceV * dirVNorm.y , ForceV * dirVNorm.z};
-    venus.acc = (Vector3){FV.x / venus.mass , FV.y / venus.mass , FV.z / venus.mass};
-    venus.vel = Vector3Add(venus.vel, Vector3Scale(venus.acc, dt));
-    venus.pos = Vector3Add(venus.pos, Vector3Scale(venus.vel, dt));
-
-    //Earth
-    Vector3 dirE = (Vector3){sun.pos.x - earth.pos.x ,sun.pos.y - earth.pos.y,sun.pos.z - earth.pos.z};
-    float rE = sqrt(dirE.x * dirE.x  + dirE.y *dirE.y + dirE.z * dirE.z);
-    float EForce = (G * sun.mass * earth.mass) / (rE * rE);
-    Vector3 dirENorm = Vector3Normalize(dirE);
-    Vector3 FE = (Vector3){ EForce * dirENorm.x ,EForce * dirENorm.y , EForce * dirENorm.z};
-    earth.acc = (Vector3){FE.x / earth.mass , FE.y / earth.mass , FE.z / earth.mass};
-    earth.vel = Vector3Add(earth.vel, Vector3Scale(earth.acc, dt));
-    earth.pos = Vector3Add(earth.pos, Vector3Scale(earth.vel, dt));
-
-    //Mars
-    Vector3 dirMa = (Vector3){sun.pos.x - mars.pos.x ,sun.pos.y - mars.pos.y,sun.pos.z - mars.pos.z};
-    float rMa = sqrt(dirMa.x * dirMa.x  + dirMa.y *dirMa.y + dirMa.z * dirMa.z);
-    float MaForce = (G * sun.mass * mars.mass) / (rMa * rMa);
-    Vector3 dirMaNorm = Vector3Normalize(dirMa);
-    Vector3 FMa = (Vector3){ MaForce * dirMaNorm.x ,MaForce * dirMaNorm.y , MaForce * dirMaNorm.z};
-    mars.acc = (Vector3){FMa.x / mars.mass , FMa.y / mars.mass , FMa.z / mars.mass};
-    mars.vel = Vector3Add(mars.vel, Vector3Scale(mars.acc, dt));
-    mars.pos = Vector3Add(mars.pos, Vector3Scale(mars.vel, dt));
-
-    //Jupiter
-    Vector3 dirJ = (Vector3){sun.pos.x - jupiter.pos.x ,sun.pos.y - jupiter.pos.y,sun.pos.z - jupiter.pos.z};
-    float rJ = sqrt(dirJ.x * dirJ.x  + dirJ.y *dirJ.y + dirJ.z * dirJ.z);
-    float JForce = (G * sun.mass * jupiter.mass) / (rJ * rJ);
-    Vector3 dirJNorm = Vector3Normalize(dirJ);
-    Vector3 FJ = (Vector3){ JForce * dirJNorm.x ,JForce * dirJNorm.y , JForce * dirJNorm.z};
-    jupiter.acc = (Vector3){FJ.x / jupiter.mass , FJ.y / jupiter.mass , FJ.z / jupiter.mass};
-    jupiter.vel = Vector3Add(jupiter.vel, Vector3Scale(jupiter.acc, dt));
-    jupiter.pos = Vector3Add(jupiter.pos, Vector3Scale(jupiter.vel, dt));
-
-    //Saturn
-    Vector3 dirS = (Vector3){sun.pos.x - saturn.pos.x ,sun.pos.y - saturn.pos.y,sun.pos.z - saturn.pos.z};
-    float rS = sqrt(dirS.x * dirS.x  + dirS.y *dirS.y + dirS.z * dirS.z);
-    float SForce = (G * sun.mass * saturn.mass) / (rS * rS);
-    Vector3 dirSNorm = Vector3Normalize(dirS);
-    Vector3 FS = (Vector3){ SForce * dirSNorm.x ,SForce * dirSNorm.y , SForce * dirSNorm.z};
-    saturn.acc = (Vector3){FS.x / saturn.mass , FS.y / saturn.mass , FS.z / saturn.mass};
-    saturn.vel = Vector3Add(saturn.vel, Vector3Scale(saturn.acc, dt));
-    saturn.pos = Vector3Add(saturn.pos, Vector3Scale(saturn.vel, dt));
-
-    //Uranus
-    Vector3 dirU = (Vector3){sun.pos.x - uranus.pos.x ,sun.pos.y - uranus.pos.y,sun.pos.z - uranus.pos.z};
-    float rU = sqrt(dirU.x * dirU.x  + dirU.y *dirU.y + dirU.z * dirU.z);
-    float UForce = (G * sun.mass * uranus.mass) / (rU * rU);
-    Vector3 dirUNorm = Vector3Normalize(dirU);
-    Vector3 FU = (Vector3){ UForce * dirUNorm.x ,UForce * dirUNorm.y , UForce * dirUNorm.z};
-    uranus.acc = (Vector3){FU.x / uranus.mass , FU.y / uranus.mass , FU.z / uranus.mass};
-    uranus.vel = Vector3Add(uranus.vel, Vector3Scale(uranus.acc, dt));
-    uranus.pos = Vector3Add(uranus.pos, Vector3Scale(uranus.vel, dt));
-
-    //Neptune
-    Vector3 dirN = (Vector3){sun.pos.x - neptune.pos.x ,sun.pos.y - neptune.pos.y,sun.pos.z - neptune.pos.z};
-    float rN = sqrt(dirN.x * dirN.x  + dirN.y *dirN.y + dirN.z * dirN.z);
-    float NForce = (G * sun.mass * neptune.mass) / (rN * rN);
-    Vector3 dirNNorm = Vector3Normalize(dirN);
-    Vector3 FN = (Vector3){ NForce * dirNNorm.x ,NForce * dirNNorm.y , NForce * dirNNorm.z};
-    neptune.acc = (Vector3){FN.x / neptune.mass , FN.y / neptune.mass , FN.z / neptune.mass};
-    neptune.vel = Vector3Add(neptune.vel, Vector3Scale(neptune.acc, dt));
-    neptune.pos = Vector3Add(neptune.pos, Vector3Scale(neptune.vel, dt));
-
-    
-}
 
 void DrawWarpedGrid(Object sun, Object mercury, Object venus, Object earth,
                     Object mars, Object jupiter, Object saturn,
@@ -230,7 +144,23 @@ void DrawWarpedGrid(Object sun, Object mercury, Object venus, Object earth,
 float warpEffect(Vector3 point, Object obj) {
     Vector3 diff = Vector3Subtract(obj.pos, point);
     float dist = Vector3Length(diff);
-    if (dist < 1.2f) dist = 1.2f;
+    if (dist < 1.5f) dist = 1.5f;
     return -obj.mass / (dist * dist * 2500.0f);
 
+}
+
+void updatePhysics(Object* planet){
+
+    float dt = GetFrameTime();
+
+    Vector3 dir = (Vector3){sun.pos.x - planet->pos.x ,sun.pos.y - planet->pos.y,sun.pos.z - planet->pos.z};
+    float r = sqrt(dir.x * dir.x  + dir.y *dir.y + dir.z * dir.z);
+    float Force = (G * sun.mass * planet->mass) / (r* r);
+    Vector3 dirNorm = Vector3Normalize(dir);
+    Vector3 F = (Vector3){ Force * dirNorm.x ,Force * dirNorm.y , Force * dirNorm.z};
+    planet->acc = (Vector3){F.x / planet->mass , F.y / planet->mass , F.z / planet->mass};
+    planet->vel = Vector3Add(planet->vel, Vector3Scale(planet->acc, dt));
+    planet->pos = Vector3Add(planet->pos, Vector3Scale(planet->vel, dt));
+
+    
 }
